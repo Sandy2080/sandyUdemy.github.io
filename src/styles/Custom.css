@@ -1,0 +1,503 @@
+/* 
+Theme Name: InstantWP 
+Theme URI: http://gentsthemes.com
+Description: Responsive WordPress theme with all the Bootstrap elements and features. Also includes different page layouts and custom post types.
+
+Author: GentsThemes 
+Author URI: http://gentsthemes.com
+Version: 3.2.0
+Tags: white, black, gray, light, custom-menu, custom-header, custom-background, one-column, two-columns, left-sidebar, right-sidebar, flexible-width, theme-options, threaded-comments, full-width-template, sticky-post, translation-ready, bootstrap, twitter
+
+Copyright (C) 2011-2014 GentsThemes 
+License: GNU General Public License, version 3 (GPLv3)
+License URI: license.txt 
+	
+CREATE CHILD THEME.
+See: http://codex.wordpress.org/Child_Themes 
+	
+*/
+
+/* ==========================================================================
+   Base Styles, Bootstrap Modifications
+   ========================================================================== */
+
+
+   ::-moz-selection {
+    background: #f2c2c9;
+    color: #a4003a;
+    text-shadow: none;
+}
+
+::selection {
+    background: #16a085;
+    color: #a4003a;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.centered {
+	text-align: center
+}
+
+.mt {
+	margin-top: 80px;
+}
+
+.mb {
+	margin-bottom: 80px;
+}
+
+/* ==========================================================================
+   General styles
+   ========================================================================== */
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+    color: #4a4a4a;
+}
+
+
+.navbar-brand {
+	font-weight: 700;
+}
+
+.navbar-default .navbar-brand {
+	color: #fff;
+}
+
+.navbar-default {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #fff;
+	background-color: transparent;
+	border-bottom: 2px solid #fff
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #fff;
+}
+
+/* ==========================================================================
+   Wrap Sections
+   ========================================================================== */
+
+#headerwrap {
+	background: url() no-repeat center top; 
+	margin-top: -70px;
+	padding-top: 250px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap h1 {
+	color:#ffffff;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	letter-spacing: 4px;
+	font-size: 80px;
+	font-weight: bold;
+}
+
+#headerwrap h4 {
+	font-weight: 400;
+	color: #ffffff
+}
+
+#social {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #f2f2f2;
+}
+
+#social i {
+	font-size: 40px;
+	color: #4a4a4a
+}
+
+#social i:hover {
+	color: #1abc9c
+}
+
+#footerwrap {
+	padding-top: 70px;
+	padding-bottom: 50px;
+	background-color: #2f2f2f;
+}
+
+#footerwrap p {
+	color: #f2f2f2;
+	margin-left: 10px;
+}
+
+#workwrap {	
+	
+	margin-top: -70px;
+	padding-top: 250px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#workwrap h1 {
+	color:#ffffff;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	letter-spacing: 4px;
+	font-size: 80px;
+	font-weight: bold;
+}
+
+#workwrap h4 {
+	font-weight: 400;
+	color: #ffffff
+}
+
+#blogwrap {	
+	/* background: url(../assets/blog.jpg) no-repeat center top; */
+	margin-top: -70px;
+	padding-top: 250px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#blogwrap h1 {
+	color:#ffffff;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	letter-spacing: 4px;
+	font-size: 80px;
+	font-weight: bold;
+}
+
+#blogwrap h4 {
+	font-weight: 400;
+	color: #ffffff
+}
+
+
+/* blog */
+
+	.blog-wrap {	
+		background:#ffffff;
+		padding:25px 0;
+		position:relative;
+		display:block;
+		z-index:1;
+	}
+	.blog-wrap .blog-media {
+		margin:20px 0;
+	}
+	.post-desc {
+		padding:0;
+		margin-top: 10px;
+	}
+	.post-desc2 {
+		padding:0;
+		margin-top: 10px;
+		text-align: left
+	}
+
+	.author-wrap{
+	  position: relative;
+	  z-index:1;
+	  margin: -70px auto 0;
+	  width:100px;
+	}
+	 .page-header {
+		border-bottom: 1px solid #EEEEEE;
+		margin:0 0;
+		padding-bottom: 0;
+	}
+	
+	.author-wrap > .inside img{
+	  background:#fff;
+	  border: 2px solid #eeeeee;
+	  display: block;
+	  margin: 0 auto;
+	  width:100px;
+	  height:100px;
+	  padding: 3px;
+	  position: relative;
+	  text-align: center;
+	  -webkit-border-radius: 50%;
+	  -moz-border-radius: 50%;
+	  -ms-border-radius: 50%;
+	  -o-border-radius: 50%;
+	  border-radius: 50%;
+	}	
+	.blog-title h2{}
+	.blog-title .post-meta{}
+	
+	.post-meta {
+		font-size: 13px;
+	}
+	.post-meta a,
+	.post-meta span{
+	}
+	.post-meta .sep{
+	  color: #777777;
+	  padding: 0 10px 0 10px;
+	}
+	#comments_wrapper {margin:60px 0}
+	.comment-list {
+		margin: 60px 0;
+		list-style:none;
+	}
+	.comment-list ul li,
+	.comment-list ol li {list-style:none;}
+	.comment-avatar {
+		margin: 0 20px 0 0;
+		float: left;
+		height: 70px; width: 70px;
+	}
+	.comment-content {
+	   background: #f5f5f5;
+		border: 1px solid #eeeeee;
+		margin-bottom: 20px;
+		overflow: hidden;
+		padding: 20px;
+	}
+	.comment-author {
+		margin-bottom: 10px;
+	}
+	.comment-meta {
+		font-size: 12px;
+		color: #aaa;
+		padding-left:10px;
+	}
+	.comment-reply {
+		float: right;
+		font-size: 12px;
+		color: #aaa;
+	}
+	.leave-comment textarea {
+		height: 150px;
+	}
+	.author_box {
+		background: #f5f5f5;
+		border: 1px solid #eeeeee;
+		padding: 20px;
+	}
+	.author_box .avatar {
+		border-radius: 50%;
+	}
+	.author_box p {
+		font-size: 13px;
+		text-align: left
+	}
+	.author_box h4 {
+		font-size: 15px;
+		text-align: left
+	}
+	.author_box img {
+		margin-right: 15px;
+	}
+	.alignleft {
+		float: left;
+	}
+
+	.post-meta {
+		color: #333;
+	}
+
+
+
+#aboutwrap {	
+	background:  no-repeat center top;
+	margin-top: -70px;
+	padding-top: 250px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 550px;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/* Gallery */
+.gallery {
+	margin-top: 30px;
+}
+
+.gallery img:hover {
+	opacity: 0.4;
+}
+
+/* Tag Cloud */
+.tagcloud a {
+	display: inline-block;
+	padding: 6px 12px;
+	font-size: 14px !important;
+	font-weight: 400;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+
+	color: #fff;
+  	background-color: #384452;
+  	border-color: #384452;
+  	margin: 4px;
+}
+
+.tagcloud a:hover {
+	color: #fff;
+  	background-color: #00b3fe;
+  	border-color: #00b3fe;
+}
+.heart {
+	color: palevioletred;
+}
+
+.react {
+	color: #61dafb;
+}
+.bootstrap {
+	color: #6610f2
+}
+
+.card-text {
+	height: 40px;
+}
+.card {
+	color: #333;
+	border-radius: 10px;
+	padding: 20px;
+	border: 1px solid #ecf0f1;
+	height: 168px;
+}
+
+.shadow {
+    box-shadow: 0 0 0 rgba(0,0,0,.08)!important;
+}
+
+.me {
+	font-family: 'Caveat', cursive;
+	font-size: 58px;
+}
+
+#social {
+	width: 100%;
+}
+.unstyled {
+	width: 45%;
+	padding: 0;
+	margin: 0 auto;
+	list-style-type: none;	
+}
+
+.unstyled li {
+	display: inline-block;
+	margin : 10px 70px 10px 70px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+	border-radius: 4px;
+}
+.btn-light {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.work .btn-light {
+    color:#f8f9fa;
+    background-color: #212529;
+    border-color: #212529;
+}
