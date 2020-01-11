@@ -15,7 +15,7 @@ export default class Navbar extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            links: ["home", "works", "about", "blog"],
+            links: ["home", "about", "blog"],
             isActive: "home"
         }
     }

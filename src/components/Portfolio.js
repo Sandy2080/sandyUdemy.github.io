@@ -4,7 +4,6 @@ import '../styles/Custom.css'
 import Header from './common/Header'
 import Social from './common/Social'
 import Footer from './common/Footer'
-import Work from './Work'
 import About from './About'
 import Blog from './Blog'
 import Home from './Home'
@@ -21,7 +20,6 @@ export default class Portfolio extends Component {
                 <Router> 
                     <Header /> 
                     <Route exact path="/" exact component={Home} />
-                    <Route exact path="/works" exact component={Work} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/blog" component={Blog} />
                 </Router>
